@@ -32,3 +32,8 @@ iframe {
     width: 300px;
     border: 5px double black;
 }
+
+.menu-item {
+    width: 500px;
+}
+
