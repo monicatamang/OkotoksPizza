@@ -37,3 +37,40 @@ iframe {
     width: 500px;
 }
 
+/* This is shown in the "Contact" page */
+#shop-hours p {
+    color: skyblue;
+}
+
+/* This is shown in the "About Us" page */
+#about-paragraph>#first-paragraph {
+    background: lightcoral;
+}
+
+/* This is shown in the "Home" page */
+#slogan+p {
+    background: peru;
+}
+
+/* This is more evident in the "Contact" page where you can see the phone number and email links are greenyellow*/
+a:link {
+    font-weight: bold;
+    color: greenyellow;
+}
+
+/* This was used to change the colour of the links when the user visited the site */
+a:visited {
+    color: red;
+}
+
+/* This was used to style the links when the user hovers over it */
+a:hover {
+    color: burlywood;
+    border: 2px double burlywood;
+}
+
+/* This will change the background of the links when the user presses it */
+a:active {
+    background: rosybrown;
+}
+
