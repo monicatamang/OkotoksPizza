@@ -1,3 +1,44 @@
+header>h1 {
+    color: black;
+    box-shadow: 3px 3px 3px grey;
+    transition: all 500ms ease-in-out;
+}
+
+header>h1:active {
+    color: skyblue;
+    box-shadow: 1px 1px 6px grey;
+}
+
+@keyframes blueWelcomeMessage {
+    0% { color: blue }
+    25% { color: rgb(0, 47, 255) }
+    50% { color: rgb(0, 81, 255) }
+    75% { color: rgb(0, 102, 255) }
+    100% { color: rgb(0, 174, 255) }
+}
+
+#welcome-message:hover {
+    animation-name: blueWelcomeMessage;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 3;
+}
+
+@keyframes borderSlogan {
+    0% { background: burlywood; }  
+    25% { background: cadetblue; }
+    50% { background: cornsilk; }
+    75% { background: cadetblue; }
+    100% { background: burlywood; }  
+}
+
+#slogan+p:hover {
+    animation-name: borderSlogan;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: 2;
+}
+
 header {
     display: grid;
     grid-auto-flow: column;
@@ -47,71 +88,64 @@ iframe {
     box-shadow: 5px 5px 0px 0px black;
 }
 
-.dining {
+#dining {
     width: 300px;
     border: 1px solid black;
     border-radius: 50%;
 }
 
-.margherita {
+#margherita {
     width: 300px;
     border: 1px solid black;
     border-radius: 2%;
 }
 
-.dough {
+#dough {
     width: 300px;
     border: 5px solid burlywood;
     border-radius: 50%;
 }
 
-.chef {
+#chef {
     width: 300px;
     box-shadow: 5px 5px 5px 0px grey;
 }
 
-.restaurant {
+#restaurant {
     width: 300px;
     border: 5px double black;
+}
+
+#shop-hours p {
+    color: skyblue;
+}
+
+#about-paragraph>#first-paragraph {
+    background: lightcoral;
+}
+
+#slogan+p {
+    background: peru;
 }
 
 .menu-item {
     width: 500px;
 }
 
-/* This is shown in the "Contact" page */
-#shop-hours p {
-    color: skyblue;
-}
-
-/* This is shown in the "About Us" page */
-#about-paragraph>#first-paragraph {
-    background: lightcoral;
-}
-
-/* This is shown in the "Home" page */
-#slogan+p {
-    background: peru;
-}
-
-/* This is more evident in the "Contact" page where you can see the phone number and email links are greenyellow*/
 a:link {
     font-weight: bold;
     color: greenyellow;
 }
 
-/* This was used to change the colour of the links when the user visited the site */
 a:visited {
     color: red;
 }
 
-/* This was used to style the links when the user hovers over it */
 a:hover {
     color: burlywood;
     border: 2px double burlywood;
 }
 
-/* This will change the background of the links when the user presses it */
 a:active {
     background: rosybrown;
 }
