@@ -1,8 +1,8 @@
-header>h1 {
+/* header>h1 {
     color: black;
     box-shadow: 3px 3px 3px grey;
     transition: all 500ms ease-in-out;
-}
+} */
 
 header>h1:active {
     color: skyblue;
@@ -39,20 +39,12 @@ header>h1:active {
     animation-iteration-count: 2;
 }
 
-header {
+/* header {
     display: grid;
     grid-auto-flow: column;
     justify-items: center;
     align-items: center;
-}
-
-nav {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    column-gap: 5px;
-    row-gap: 5px;
-    place-items: center;
-}
+} */
 
 #contact-nav {
     display: grid;
@@ -120,10 +112,6 @@ iframe {
     color: skyblue;
 }
 
-#about-paragraph>#first-paragraph {
-    background: lightcoral;
-}
-
 #slogan+p {
     background: peru;
 }
@@ -132,7 +120,7 @@ iframe {
     width: 500px;
 }
 
-a:link {
+/* a:link {
     font-weight: bold;
     color: greenyellow;
 }
@@ -148,4 +136,9 @@ a:hover {
 
 a:active {
     background: rosybrown;
+}
+*/
+
+.link {
+    background: pink;
 }
