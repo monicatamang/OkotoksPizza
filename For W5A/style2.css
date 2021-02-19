@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: burlywood;
+}
+
+header {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  min-height: 10vh;
+  background: brown;
+  color: white;
+  padding: 10px;
+}
+
+header > h1 {
+  margin-bottom: 5px;
+}
+
+.contact2-nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+  -webkit-column-gap: 5px;
+          column-gap: 5px;
+  place-items: center;
+}
+
+.contact2-nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.contact2-grid {
+  min-height: 80vh;
+}
+
+article, div {
+  padding: 10px;
+}
+
+div > h4 {
+  text-align: center;
+}
+
+.map {
+  display: none;
+}
+
+footer {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  background: brown;
+  min-height: 10vh;
+  color: white;
+}
+
+/* First Breakpoint: Tablet */
+@media only screen and (min-width: 600px) {
+  body {
+    background: blanchedalmond;
+  }
+  header {
+    min-height: 20vh;
+  }
+  a {
+    text-decoration: none;
+    color: brown;
+  }
+  .contact2-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    -ms-grid-rows: 1fr 2fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
+    row-gap: 5%;
+    min-height: 70vh;
+    padding: 5%;
+  }
+  div > h4 {
+    text-align: left;
+  }
+  .map {
+    display: none;
+  }
+  footer {
+    min-height: 10vh;
+  }
+}
+
+/* Second Breakpoint: Desktop or Laptop */
+@media only screen and (min-width: 1000px) {
+  body {
+    background: black;
+    color: white;
+  }
+  header {
+    font-size: 2em;
+    min-height: 30vh;
+  }
+  .contact2-nav, footer {
+    font-size: 1.5rem;
+  }
+  .contact2-grid {
+    font-size: 1.3em;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+    row-gap: 0%;
+    -webkit-column-gap: 3%;
+            column-gap: 3%;
+    min-height: 60vh;
+    padding: 5%;
+  }
+  .map {
+    display: -ms-grid;
+    display: grid;
+    place-items: center;
+    text-align: center;
+  }
+  .map > iframe {
+    width: 90vw;
+    height: 50vh;
+    padding-bottom: 5%;
+  }
+  footer {
+    min-height: 10vh;
+  }
+}
+/*# sourceMappingURL=style2.css.map */

@@ -62,40 +62,55 @@ body {
   background: beige;
 }
 
-main {
+#menu-nav {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+  place-items: center;
   text-align: center;
-  margin: 10% 0%;
-  padding: 5%;
-  min-height: 90vh;
+  margin-top: 5%;
 }
 
-main > h1 {
-  margin-bottom: 10%;
+#menu-nav > h1 {
   color: brown;
 }
 
-main .buttons {
+#menu-nav nav {
   display: -ms-grid;
   display: grid;
-  grid-auto-flow: row;
-  place-items: center;
-  margin: 10% 0%;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  margin-top: 3%;
 }
 
-main .buttons > a {
+#menu-nav nav > a {
   text-decoration: none;
   color: black;
-  font-weight: bold;
-  background: burlywood;
-  margin: 3%;
-  padding: 4% 7%;
-  border-radius: 3px;
+  text-align: center;
 }
 
-main #margherita {
-  width: 100%;
+article {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+article .menu-item {
+  margin: 5% 0%;
+  padding: 5%;
+  background: burlywood;
+  width: 70%;
+}
+
+article .menu-item .menu-image {
+  width: 40%;
   border-radius: 3px;
-  margin-top: 5%;
+  margin: 5% 0%;
+}
+
+article .menu-item .description {
+  font-size: 10pt;
 }
 
 footer {
@@ -157,28 +172,29 @@ footer .social-links a {
   body {
     background: lightgrey;
   }
-  main {
-    margin: 10%;
+  #menu-nav > h1 {
+    font-size: 3rem;
   }
-  main .buttons {
-    grid-auto-flow: column;
-  }
-  main > h1 {
-    font-size: 3em;
-  }
-  main p {
-    font-size: 16pt;
-  }
-  main .buttons > a {
-    background: lightslategray;
-    color: white;
-    padding: 5% 10%;
+  #menu-nav nav > a {
     font-size: 20pt;
   }
-  main #margherita {
-    width: 100%;
+  article .menu-item {
+    background: brown;
+    color: white;
+  }
+  article .menu-item h4 {
+    font-size: 20pt;
+  }
+  article .menu-item .description {
+    font-size: 14pt;
+    margin-top: 3%;
+  }
+  article .menu-item .menu-image {
+    width: 20%;
     border-radius: 3px;
-    margin-top: 10%;
+    margin-top: 3%;
+    margin-right: 5%;
+    float: left;
   }
 }
 
@@ -186,29 +202,36 @@ footer .social-links a {
   body {
     background: whitesmoke;
   }
-  main {
-    margin: 10%;
-  }
-  main .buttons {
-    grid-auto-flow: column;
-  }
-  main > h1 {
-    font-size: 4em;
+  #menu-nav > h1 {
+    font-size: 4rem;
     color: darkcyan;
   }
-  main p {
-    font-size: 20pt;
+  #menu-nav nav > a {
+    font-size: 3em;
   }
-  main .buttons > a {
-    background: black;
-    color: white;
-    padding: 10% 15%;
-    font-size: 25pt;
+  article {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    row-gap: 5%;
+    margin: 10% 0%;
   }
-  main #margherita {
-    width: 100%;
+  article .menu-item {
+    background: darkcyan;
+    height: 80%;
+  }
+  article .menu-item h4 {
+    font-size: 30pt;
+  }
+  article .menu-item .description {
+    font-size: 16pt;
+    margin-top: 3%;
+  }
+  article .menu-item .menu-image {
+    width: 40%;
     border-radius: 3px;
-    margin-top: 10%;
+    margin-top: 3%;
+    margin-right: 5%;
+    float: left;
   }
 }
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=menu.css.map */

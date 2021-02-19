@@ -1,0 +1,58 @@
+$dark-color: brown;
+$light-color: beige;
+
+footer {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+
+    padding: 5% 0%;
+    text-align: center;
+    background: $dark-color;
+    color: $light-color;
+    min-height: 10vh;
+
+    #copyright {
+        font-size: 10pt;
+    }
+
+    .social-links {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        place-items: center;
+        column-gap: 3%;
+    }
+
+    .social-links a {
+        text-decoration: none;
+        color: $light-color;
+        text-align: center;
+    }
+}
+
+@media only screen and (min-width:768px) {
+    footer {
+        .social-links a {
+            font-size: 18pt;
+        }
+
+        #copyright {
+            font-size: 14pt;
+        }
+    }
+}
+
+@media only screen and (min-width:1000px) {
+    footer {
+        background: darkcyan;
+
+        .social-links a {
+            font-size: 25pt;
+            font-weight: bold;
+        }
+
+        #copyright {
+            font-size: 18pt;
+        }
+    }
+}

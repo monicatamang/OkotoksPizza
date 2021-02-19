@@ -62,37 +62,41 @@ body {
   background: beige;
 }
 
-main {
+#contact-nav {
   text-align: center;
-  margin: 10% 0%;
-  padding: 5%;
-  min-height: 90vh;
+  margin: 5%;
 }
 
-main > h1 {
-  margin-bottom: 10%;
+#contact-nav > h1 {
   color: brown;
 }
 
-main .buttons {
+#contact-nav nav {
   display: -ms-grid;
   display: grid;
-  grid-auto-flow: row;
-  place-items: center;
-  margin: 10% 0%;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
 }
 
-main .buttons > a {
+#contact-nav nav > a {
   text-decoration: none;
   color: black;
-  font-weight: bold;
-  background: burlywood;
-  margin: 3%;
-  padding: 4% 7%;
-  border-radius: 3px;
+  text-align: center;
+  margin-top: 10%;
 }
 
-main #margherita {
+.info {
+  margin: 5%;
+}
+
+.info p > a {
+  text-decoration: none;
+  color: brown;
+  text-align: center;
+  font-weight: bold;
+}
+
+.info iframe {
   width: 100%;
   border-radius: 3px;
   margin-top: 5%;
@@ -152,63 +156,4 @@ footer .social-links a {
     font-size: 18pt;
   }
 }
-
-@media only screen and (min-width: 768px) {
-  body {
-    background: lightgrey;
-  }
-  main {
-    margin: 10%;
-  }
-  main .buttons {
-    grid-auto-flow: column;
-  }
-  main > h1 {
-    font-size: 3em;
-  }
-  main p {
-    font-size: 16pt;
-  }
-  main .buttons > a {
-    background: lightslategray;
-    color: white;
-    padding: 5% 10%;
-    font-size: 20pt;
-  }
-  main #margherita {
-    width: 100%;
-    border-radius: 3px;
-    margin-top: 10%;
-  }
-}
-
-@media only screen and (min-width: 1000px) {
-  body {
-    background: whitesmoke;
-  }
-  main {
-    margin: 10%;
-  }
-  main .buttons {
-    grid-auto-flow: column;
-  }
-  main > h1 {
-    font-size: 4em;
-    color: darkcyan;
-  }
-  main p {
-    font-size: 20pt;
-  }
-  main .buttons > a {
-    background: black;
-    color: white;
-    padding: 10% 15%;
-    font-size: 25pt;
-  }
-  main #margherita {
-    width: 100%;
-    border-radius: 3px;
-    margin-top: 10%;
-  }
-}
-/*# sourceMappingURL=style.css.map */
+/*# sourceMappingURL=contact.css.map */

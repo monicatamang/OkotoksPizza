@@ -1,0 +1,134 @@
+@import '_header.scss';
+
+$initial-margin: 0%;
+$initial-padding: 0%;
+$underline: none;
+$full-width: 100%;
+$roundness: 3px;
+
+@mixin align() {
+    margin: $initial-margin;
+    padding: $initial-padding;
+}
+
+@mixin nav-links($light-color) {
+    text-decoration: $underline;
+    color: $light-color;
+}
+
+@mixin image-size() {
+    width: $full-width;
+    border-radius: $roundness;
+}
+
+* {
+    @include align();
+}
+
+body {
+    background: $light-color;
+}
+
+main {
+    text-align: center;
+    margin: 10% 0%;
+    padding: 5%;
+    min-height: 90vh;
+    
+    >h1 {
+        margin-bottom: 10%;
+        color: $dark-color;
+    }
+
+    .buttons {
+        display: grid;
+        grid-auto-flow: row;
+        place-items: center;
+        margin: 10% 0%;
+    }
+
+    .buttons>a {
+        @include nav-links(black);
+        font-weight: bold;
+        background: $accent-color;
+        margin: 3%;
+        padding: 4% 7%;
+        border-radius: 3px;
+    }
+
+    #margherita {
+        @include image-size();
+        margin-top: 5%;
+    }
+}
+
+@import '_footer.scss';
+
+@media only screen and (min-width:768px) {
+    body {
+        background: lightgrey;
+    }
+
+    main {
+        margin: 10%;
+
+        .buttons {
+            grid-auto-flow: column;
+        }
+
+        >h1 {
+            font-size: 3em;
+        }
+        
+        p {
+            font-size: 16pt;
+        }
+
+        .buttons>a {
+            background: lightslategray;
+            color: white;
+            padding: 5% 10%;
+            font-size: 20pt;
+        }
+
+        #margherita {
+            @include image-size();
+            margin-top: 10%;
+        }
+    }
+}
+
+@media only screen and (min-width:1000px) {
+    body {
+        background: whitesmoke;
+    }
+
+    main {
+        margin: 10%;
+
+        .buttons {
+            grid-auto-flow: column;
+        }
+
+        >h1 {
+            font-size: 4em;
+            color: darkcyan;
+        }
+        
+        p {
+            font-size: 20pt;
+        }
+
+        .buttons>a {
+            background: black;
+            color: white;
+            padding: 10% 15%;
+            font-size: 25pt;
+        }
+
+        #margherita {
+            @include image-size();
+            margin-top: 10%;
+        }
+    }
+}

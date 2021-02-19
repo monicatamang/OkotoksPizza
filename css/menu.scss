@@ -1,0 +1,159 @@
+@import '_header.scss';
+
+$initial-margin: 0%;
+$initial-padding: 0%;
+$underline: none;
+$full-width: 100%;
+$roundness: 3px;
+
+@mixin align() {
+    margin: $initial-margin;
+    padding: $initial-padding;
+}
+
+@mixin nav-links($light-color) {
+    text-decoration: $underline;
+    color: $light-color;
+}
+
+@mixin image-size($full-width) {
+    width: $full-width;
+    border-radius: $roundness;
+}
+
+* {
+    @include align();
+}
+
+body {
+    background: $light-color;
+}
+
+#menu-nav {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    place-items: center;
+    text-align: center;
+    margin-top: 5%;
+
+    >h1 {
+        color: $dark-color;
+    }
+
+    nav {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top: 3%;
+    }
+
+    nav>a {
+        @include nav-links(black);
+        text-align: center;
+    }
+}
+
+article {
+    display: grid;
+    place-items: center;
+
+    .menu-item {
+        margin: 5% 0%;
+        padding: 5%;
+        background: $accent-color;
+        width: 70%;
+    
+        .menu-image {
+            @include image-size(40%);
+            margin: 5% 0%;
+        }
+    
+        .description {
+            font-size: 10pt;
+        }
+    }
+}
+
+@import '_footer.scss';
+
+@media only screen and (min-width:768px) {
+    body {
+        background: lightgrey;
+    }
+    
+    #menu-nav {
+        >h1 {
+            font-size: 3rem;
+        }
+    
+        nav>a {
+            font-size: 20pt;
+        }
+    }
+    
+    article {
+        .menu-item {
+            background: $dark-color;
+            color: white;
+        
+            h4 {
+                font-size: 20pt;
+            }
+
+            .description {
+                font-size: 14pt;
+                margin-top: 3%;
+            }
+
+            .menu-image {
+                @include image-size(20%);
+                margin-top: 3%;
+                margin-right: 5%;
+                float: left;
+            }
+        }
+    }
+}
+
+@media only screen and (min-width:1000px) {
+    body {
+        background: whitesmoke;
+    }
+    
+    #menu-nav {
+        >h1 {
+            font-size: 4rem;
+            color: darkcyan;
+        }
+    
+        nav>a {
+            font-size: 3em;
+        }
+    }
+    
+    article {
+        grid-template-columns: 1fr 1fr;
+        row-gap: 5%;
+        margin: 10% 0%;
+
+        .menu-item {
+            background: darkcyan;
+            height: 80%;
+        
+            h4 {
+                font-size: 30pt;
+            }
+
+            .description {
+                font-size: 16pt;
+                margin-top: 3%;
+            }
+
+            .menu-image {
+                @include image-size(40%);
+                margin-top: 3%;
+                margin-right: 5%;
+                float: left;
+            }
+        }
+    }
+}
